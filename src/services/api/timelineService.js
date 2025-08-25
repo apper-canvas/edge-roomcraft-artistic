@@ -43,6 +43,59 @@ export const timelineService = {
       throw new Error("Timeline not found");
     }
     const deletedTimeline = timelineData.splice(index, 1)[0];
-    return { ...deletedTimeline };
+return { ...deletedTimeline };
+  },
+
+  // Site visit management methods
+  async getSiteVisits(timelineId) {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    // Mock site visits linked to timeline
+    const siteVisits = [
+      {
+        Id: 1,
+        timelineId,
+        title: "Initial Site Visit",
+        description: "Measurements and assessment",
+        date: "2024-03-28T10:00:00Z",
+        endDate: "2024-03-28T12:00:00Z",
+        status: "confirmed",
+        phase: "consultation",
+        attendees: ["client", "designer"]
+      },
+      {
+        Id: 2,
+        timelineId,
+        title: "Progress Review",
+        description: "Design phase inspection",
+        date: "2024-04-05T14:00:00Z",
+        endDate: "2024-04-05T16:00:00Z",
+        status: "scheduled",
+        phase: "design",
+        attendees: ["client", "designer"]
+      }
+    ];
+    return [...siteVisits];
+  },
+
+  async scheduleSiteVisit(timelineId, visitData) {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const newVisit = {
+      ...visitData,
+      Id: Date.now(), // Simple ID generation
+      timelineId,
+      status: "scheduled",
+      createdAt: new Date().toISOString()
+    };
+    return { ...newVisit };
+  },
+
+  async updateSiteVisit(visitId, data) {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    return { Id: visitId, ...data };
+  },
+
+  async cancelSiteVisit(visitId) {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    return { Id: visitId, status: "cancelled" };
   }
 };

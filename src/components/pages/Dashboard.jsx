@@ -123,8 +123,7 @@ const Dashboard = () => {
       priority: "low"
     }
   ];
-
-  return (
+return (
     <div className="space-y-8">
       {/* Status Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -164,8 +163,71 @@ const Dashboard = () => {
           </Card>
         </div>
 
-        {/* Upcoming Tasks */}
-        <div>
+        {/* Calendar Widget & Upcoming Tasks */}
+        <div className="space-y-6">
+          {/* Calendar Widget */}
+          <Card className="p-6">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-xl font-display font-semibold text-midnight">
+                Site Visits
+              </h2>
+              <Button 
+                variant="calendar" 
+                size="sm"
+                onClick={() => window.location.href = '/calendar'}
+              >
+                <ApperIcon name="Calendar" className="h-4 w-4 mr-2" />
+                Calendar
+              </Button>
+            </div>
+            
+            <div className="space-y-4">
+              {/* Next Visit */}
+              <div className="p-4 bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-lg">
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="p-2 bg-purple-100 rounded-lg">
+                    <ApperIcon name="MapPin" className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900">Progress Review</p>
+                    <p className="text-sm text-gray-600">Design phase inspection</p>
+                  </div>
+                </div>
+                <div className="text-sm text-gray-600">
+                  <p>March 28, 2024 • 10:00 AM - 12:00 PM</p>
+                </div>
+              </div>
+
+              {/* Upcoming Visits */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <ApperIcon name="Clock" className="h-4 w-4 text-gray-500" />
+                    <span className="text-sm font-medium">Final Walkthrough</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Apr 5</span>
+                </div>
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-center space-x-2">
+                    <ApperIcon name="Clock" className="h-4 w-4 text-gray-500" />
+                    <span className="text-sm font-medium">Installation Check</span>
+                  </div>
+                  <span className="text-xs text-gray-500">Apr 15</span>
+                </div>
+              </div>
+
+              <Button 
+                className="w-full" 
+                variant="outline"
+                onClick={() => window.location.href = '/calendar'}
+              >
+                <ApperIcon name="Plus" className="h-4 w-4 mr-2" />
+                Schedule Visit
+              </Button>
+            </div>
+          </Card>
+
+          {/* Upcoming Tasks */}
           <Card className="p-6">
             <h2 className="text-xl font-display font-semibold text-midnight mb-6">
               Upcoming Tasks

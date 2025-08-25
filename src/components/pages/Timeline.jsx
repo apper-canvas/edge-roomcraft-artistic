@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import Card from "@/components/atoms/Card";
-import Badge from "@/components/atoms/Badge";
-import ApperIcon from "@/components/ApperIcon";
-import Loading from "@/components/ui/Loading";
-import Error from "@/components/ui/Error";
+import React, { useEffect, useState } from "react";
 import { timelineService } from "@/services/api/timelineService";
+import ApperIcon from "@/components/ApperIcon";
+import Card from "@/components/atoms/Card";
+import Button from "@/components/atoms/Button";
+import Badge from "@/components/atoms/Badge";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
 
 const Timeline = () => {
   const [timeline, setTimeline] = useState(null);
@@ -237,37 +238,96 @@ const Timeline = () => {
           ))}
         </div>
       </div>
+{/* Site Visit Scheduling */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Upcoming Milestones */}
+        <Card className="p-6">
+          <h2 className="text-xl font-display font-semibold text-midnight mb-6">
+            Upcoming Milestones
+          </h2>
+          
+          <div className="space-y-4">
+            {timeline.upcomingMilestones?.map((milestone) => (
+              <div key={milestone.Id} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="p-2 bg-sky-100 rounded-lg">
+                  <ApperIcon name="Flag" className="h-4 w-4 text-sky-600" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-medium text-gray-900">{milestone.name}</p>
+                  <p className="text-sm text-gray-600">{milestone.description}</p>
+                </div>
+                <div className="text-right text-sm text-gray-600">
+                  <p className="font-medium">
+                    {new Date(milestone.date).toLocaleDateString()}
+                  </p>
+                  <p>{milestone.phase}</p>
+                </div>
+              </div>
+            )) || (
+              <p className="text-gray-500 text-center py-4">
+                No upcoming milestones scheduled
+              </p>
+            )}
+          </div>
+        </Card>
 
-      {/* Upcoming Milestones */}
-      <Card className="p-6">
-        <h2 className="text-xl font-display font-semibold text-midnight mb-6">
-          Upcoming Milestones
-        </h2>
-        
-        <div className="space-y-4">
-          {timeline.upcomingMilestones?.map((milestone) => (
-            <div key={milestone.Id} className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
-              <div className="p-2 bg-sky-100 rounded-lg">
-                <ApperIcon name="Flag" className="h-4 w-4 text-sky-600" />
+        {/* Site Visit Calendar Widget */}
+        <Card className="p-6">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-display font-semibold text-midnight">
+              Site Visit Calendar
+            </h2>
+            <Button 
+              variant="calendar" 
+              size="sm"
+              onClick={() => window.location.href = '/calendar'}
+            >
+              <ApperIcon name="Calendar" className="h-4 w-4 mr-2" />
+              Open Calendar
+            </Button>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="p-4 bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-lg">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center space-x-3">
+                  <div className="p-2 bg-purple-100 rounded-lg">
+                    <ApperIcon name="MapPin" className="h-4 w-4 text-purple-600" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900">Next Site Visit</p>
+                    <p className="text-sm text-gray-600">Progress inspection</p>
+                  </div>
+                </div>
+                <Badge variant="info">Confirmed</Badge>
               </div>
-              <div className="flex-1">
-                <p className="font-medium text-gray-900">{milestone.name}</p>
-                <p className="text-sm text-gray-600">{milestone.description}</p>
-              </div>
-              <div className="text-right text-sm text-gray-600">
-                <p className="font-medium">
-                  {new Date(milestone.date).toLocaleDateString()}
-                </p>
-                <p>{milestone.phase}</p>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600">March 28, 2024</span>
+                <span className="font-medium text-purple-600">10:00 AM - 12:00 PM</span>
               </div>
             </div>
-          )) || (
-            <p className="text-gray-500 text-center py-4">
-              No upcoming milestones scheduled
-            </p>
-          )}
-        </div>
-      </Card>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => window.location.href = '/calendar'}
+              >
+                <ApperIcon name="Plus" className="h-4 w-4 mr-2" />
+                Schedule Visit
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => window.location.href = '/calendar'}
+              >
+                <ApperIcon name="Clock" className="h-4 w-4 mr-2" />
+                View All
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </div>
     </div>
   );
 };
