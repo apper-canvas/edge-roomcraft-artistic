@@ -57,12 +57,12 @@ const Documents = () => {
     setFilteredDocuments(filtered);
   }, [documents, selectedCategory, searchQuery]);
 
-  const categories = [
+const categories = [
     { value: "all", label: "All Documents", count: documents.length },
     { value: "quotes", label: "Quotes", count: documents.filter(d => d.category === "quotes").length },
     { value: "drawings", label: "Drawings", count: documents.filter(d => d.category === "drawings").length },
-    { value: "contracts", label: "Contracts", count: documents.filter(d => d.category === "contracts").length },
     { value: "warranties", label: "Warranties", count: documents.filter(d => d.category === "warranties").length },
+    { value: "contracts", label: "Contracts", count: documents.filter(d => d.category === "contracts").length },
     { value: "invoices", label: "Invoices", count: documents.filter(d => d.category === "invoices").length },
     { value: "photos", label: "Photos", count: documents.filter(d => d.category === "photos").length }
   ];
