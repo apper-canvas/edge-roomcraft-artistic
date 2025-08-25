@@ -161,11 +161,11 @@ const Calendar = () => {
             Schedule and manage site visits for your project
           </p>
         </div>
-        <div className="flex items-center space-x-4">
+<div className="flex items-center space-x-4">
           <Select 
             value={view} 
             onChange={(e) => setView(e.target.value)}
-            className="w-32"
+            className="w-40"
           >
             <option value="month">Month View</option>
             <option value="week">Week View</option>
