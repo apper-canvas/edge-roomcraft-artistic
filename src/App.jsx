@@ -1,29 +1,31 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import Layout from "@/components/organisms/Layout";
-import Dashboard from "@/components/pages/Dashboard";
+import Tickets from "@/components/pages/Tickets";
 import Brief from "@/components/pages/Brief";
 import Proposals from "@/components/pages/Proposals";
-import Timeline from "@/components/pages/Timeline";
 import Calendar from "@/components/pages/Calendar";
-import Messages from "@/components/pages/Messages";
+import Timeline from "@/components/pages/Timeline";
+import Dashboard from "@/components/pages/Dashboard";
 import Documents from "@/components/pages/Documents";
+import Messages from "@/components/pages/Messages";
 import Payments from "@/components/pages/Payments";
+import Layout from "@/components/organisms/Layout";
 
 function App() {
-  return (
+return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
+      <div className="App">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
-<Route path="brief" element={<Brief />} />
+            <Route path="brief" element={<Brief />} />
             <Route path="proposals" element={<Proposals />} />
             <Route path="timeline" element={<Timeline />} />
             <Route path="calendar" element={<Calendar />} />
-            <Route path="messages" element={<Messages />} />
+            <Route path="tickets" element={<Tickets />} />
             <Route path="documents" element={<Documents />} />
+            <Route path="messages" element={<Messages />} />
             <Route path="payments" element={<Payments />} />
           </Route>
         </Routes>
@@ -38,7 +40,7 @@ function App() {
           draggable
           pauseOnHover
           style={{ zIndex: 9999 }}
-        />
+/>
       </div>
     </BrowserRouter>
   );

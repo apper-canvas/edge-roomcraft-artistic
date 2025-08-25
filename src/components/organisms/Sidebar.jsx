@@ -3,56 +3,52 @@ import { NavLink } from "react-router-dom";
 import ApperIcon from "@/components/ApperIcon";
 
 const Sidebar = ({ onClose }) => {
-const navigation = [
-    { name: "Dashboard", href: "/", icon: "Home" },
-    { name: "Project Brief", href: "/brief", icon: "FileText" },
-    { name: "Design Proposals", href: "/proposals", icon: "Palette" },
-    { name: "Project Timeline", href: "/timeline", icon: "Calendar" },
-    { name: "Site Visit Calendar", href: "/calendar", icon: "CalendarDays" },
+  const navigation = [
+    { name: "Dashboard", href: "/", icon: "LayoutDashboard" },
+    { name: "Brief", href: "/brief", icon: "FileText" },
+    { name: "Proposals", href: "/proposals", icon: "PresentationChart" },
+    { name: "Timeline", href: "/timeline", icon: "Calendar" },
+    { name: "Calendar", href: "/calendar", icon: "CalendarDays" },
+    { name: "Tickets", href: "/tickets", icon: "AlertTriangle" },
+    { name: "Documents", href: "/documents", icon: "FolderOpen" },
     { name: "Messages", href: "/messages", icon: "MessageSquare" },
-    { name: "Documents", href: "/documents", icon: "Folder" },
     { name: "Payments", href: "/payments", icon: "CreditCard" },
   ];
 
   return (
-    <div className="w-64 h-full bg-gradient-to-b from-midnight to-slate-800 text-white flex flex-col shadow-xl">
-      {/* Header */}
-      <div className="p-6 border-b border-slate-700">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-gradient-to-r from-terracotta to-orange-500 rounded-lg">
-              <ApperIcon name="Home" className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-display font-bold">RoomCraft</h1>
-              <p className="text-xs text-slate-300">Interior Design</p>
-            </div>
+    <div className="flex h-full w-64 flex-col bg-white border-r border-gray-200">
+      {/* Logo */}
+      <div className="flex h-16 items-center justify-between px-6 border-b border-gray-200">
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-terracotta to-orange-500 rounded-lg flex items-center justify-center">
+            <ApperIcon name="Home" className="h-5 w-5 text-white" />
           </div>
-          {onClose && (
-            <button
-              onClick={onClose}
-              className="lg:hidden p-1 hover:bg-slate-700 rounded"
-            >
-              <ApperIcon name="X" className="h-5 w-5" />
-            </button>
-          )}
+          <span className="text-xl font-display font-bold text-midnight">RoomCraft</span>
         </div>
+        {onClose && (
+          <button
+            onClick={onClose}
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+          >
+            <ApperIcon name="X" className="h-5 w-5 text-gray-600" />
+          </button>
+        )}
       </div>
 
       {/* Navigation */}
       <nav className="flex-1 px-4 py-6 space-y-2">
-        {navigation.map((item) => (
+{navigation.map((item) => (
           <NavLink
             key={item.name}
             to={item.href}
+            onClick={onClose}
             className={({ isActive }) =>
-              `flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+              `flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 space-x-3 ${
                 isActive
                   ? "bg-gradient-to-r from-terracotta to-orange-500 text-white shadow-lg"
-                  : "text-slate-300 hover:bg-slate-700 hover:text-white"
+                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               }`
             }
-            onClick={onClose}
           >
             <ApperIcon name={item.icon} className="h-5 w-5" />
             <span className="font-medium">{item.name}</span>
