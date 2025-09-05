@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useSelector } from "react-redux";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
+import { AuthContext } from "@/App";
 
 const Header = ({ onMenuClick }) => {
+  const { logout } = useContext(AuthContext);
+  const { user } = useSelector((state) => state.user);
+  
   return (
     <header className="bg-white border-b border-gray-200 px-6 py-4">
       <div className="flex items-center justify-between">
@@ -36,6 +41,18 @@ const Header = ({ onMenuClick }) => {
             <ApperIcon name="Bell" className="h-4 w-4 mr-2" />
             Notifications
           </Button>
+
+          {user && (
+            <div className="flex items-center space-x-3">
+              <span className="text-sm text-gray-600">
+                {user.firstName} {user.lastName}
+              </span>
+              <Button variant="outline" size="sm" onClick={logout}>
+                <ApperIcon name="LogOut" className="h-4 w-4 mr-2" />
+                Logout
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </header>

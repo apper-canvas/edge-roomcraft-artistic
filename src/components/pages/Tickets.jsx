@@ -44,8 +44,21 @@ const Tickets = () => {
     try {
       setError("");
       setLoading(true);
-      const ticketData = await ticketService.getAll();
-      setTickets(ticketData);
+const ticketData = await ticketService.getAll();
+      const mappedTickets = ticketData.map(ticket => ({
+        Id: ticket.Id,
+        title: ticket.title_c || ticket.title,
+        description: ticket.description_c || ticket.description,
+        priority: ticket.priority_c || ticket.priority,
+        status: ticket.status_c || ticket.status,
+        category: ticket.category_c || ticket.category,
+        photos: ticket.photos_c ? JSON.parse(ticket.photos_c) : (ticket.photos || []),
+        annotations: ticket.annotations_c ? JSON.parse(ticket.annotations_c) : (ticket.annotations || []),
+        assignedTo: ticket.assigned_to_c || ticket.assignedTo,
+        createdAt: ticket.CreatedDate || ticket.createdAt,
+        updatedAt: ticket.LastModifiedDate || ticket.updatedAt
+      }));
+      setTickets(mappedTickets);
       setFilteredTickets(ticketData);
     } catch (err) {
       setError(err.message || "Failed to load tickets");

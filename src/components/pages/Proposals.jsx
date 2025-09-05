@@ -22,8 +22,22 @@ const Proposals = () => {
     try {
       setError("");
       setLoading(true);
-      const proposalData = await proposalService.getAll();
-      setProposals(proposalData);
+const proposalData = await proposalService.getAll();
+      const mappedProposals = proposalData.map(proposal => ({
+        Id: proposal.Id,
+        roomId: proposal.room_id_c || proposal.roomId,
+        roomName: proposal.room_name_c || proposal.roomName,
+        previewImage: proposal.preview_image_c || proposal.previewImage,
+        colorPalette: proposal.color_palette_c ? JSON.parse(proposal.color_palette_c) : (proposal.colorPalette || []),
+        totalCost: proposal.total_cost_c || proposal.totalCost,
+        status: proposal.status_c || proposal.status,
+        furniture: proposal.furniture_items_c ? JSON.parse(proposal.furniture_items_c) : (proposal.furniture || []),
+        comments: proposal.comments_c ? JSON.parse(proposal.comments_c) : (proposal.comments || []),
+        clientFeedback: proposal.client_feedback_c || proposal.clientFeedback,
+        designerNotes: proposal.designer_notes_c || proposal.designerNotes,
+        createdAt: proposal.CreatedDate || proposal.createdAt
+      }));
+      setProposals(mappedProposals);
     } catch (err) {
       setError(err.message || "Failed to load proposals");
     } finally {

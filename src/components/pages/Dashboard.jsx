@@ -17,8 +17,24 @@ const Dashboard = () => {
     try {
       setError("");
       setLoading(true);
-      const projectData = await projectService.getById(1);
-      setProject(projectData);
+const projectData = await projectService.getById(1);
+      const mappedProject = {
+        Id: projectData.Id,
+        name: projectData.project_name_c || projectData.name,
+        clientId: projectData.client_id_c || projectData.clientId,
+        designerId: projectData.designer_id_c || projectData.designerId,
+        status: projectData.status_c || projectData.status,
+        budget: projectData.budget_c || projectData.budget,
+        estimatedCompletion: projectData.estimated_completion_c || projectData.estimatedCompletion,
+        description: projectData.description_c || projectData.description,
+        address: projectData.address_c || projectData.address,
+        rooms: projectData.rooms_c ? JSON.parse(projectData.rooms_c) : (projectData.rooms || []),
+        progressPercentage: projectData.progress_percentage_c || projectData.progressPercentage,
+        startDate: projectData.start_date_c || projectData.startDate,
+        actualCompletion: projectData.actual_completion_c || projectData.actualCompletion,
+        createdAt: projectData.CreatedDate || projectData.createdAt
+      };
+      setProject(mappedProject);
     } catch (err) {
       setError(err.message || "Failed to load dashboard data");
     } finally {
