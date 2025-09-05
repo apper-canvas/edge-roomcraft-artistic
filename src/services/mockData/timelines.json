@@ -1,0 +1,167 @@
+[
+  {
+    "Id": 1,
+    "projectId": 1,
+    "projectName": "Modern Kitchen & Living Room Renovation",
+    "clientName": "Sarah Johnson",
+    "overallProgress": 65,
+    "status": "in-progress",
+    "startDate": "2024-02-01T00:00:00Z",
+    "estimatedCompletion": "2024-04-15T00:00:00Z",
+    "actualStartDate": "2024-02-01T00:00:00Z",
+    "phases": [
+      {
+        "Id": 1,
+        "phase": "consultation",
+        "name": "Initial Consultation & Requirements",
+        "description": "Understanding client needs, space assessment, and initial design concepts",
+        "status": "completed",
+        "progress": 100,
+        "startDate": "2024-02-01T00:00:00Z",
+        "endDate": "2024-02-07T00:00:00Z",
+        "actualStartDate": "2024-02-01T00:00:00Z",
+        "actualEndDate": "2024-02-06T00:00:00Z",
+        "tasks": [
+          {"name": "Client needs assessment meeting", "completed": true},
+          {"name": "Space measurements and documentation", "completed": true},
+          {"name": "Budget discussion and approval", "completed": true},
+          {"name": "Style preference consultation", "completed": true}
+        ]
+      },
+      {
+        "Id": 2,
+        "phase": "design",
+        "name": "Design Development",
+        "description": "Creating detailed design plans, 3D visualizations, and material selections",
+        "status": "completed",
+        "progress": 100,
+        "startDate": "2024-02-08T00:00:00Z",
+        "endDate": "2024-02-21T00:00:00Z",
+        "actualStartDate": "2024-02-08T00:00:00Z",
+        "actualEndDate": "2024-02-20T00:00:00Z",
+        "tasks": [
+          {"name": "Initial design concepts", "completed": true},
+          {"name": "3D renderings and visualizations", "completed": true},
+          {"name": "Material and color palette selection", "completed": true},
+          {"name": "Furniture and fixture specifications", "completed": true},
+          {"name": "Technical drawings and layouts", "completed": true}
+        ]
+      },
+      {
+        "Id": 3,
+        "phase": "approval",
+        "name": "Design Approval & Permits",
+        "description": "Client approval of final design and obtaining necessary permits",
+        "status": "completed",
+        "progress": 100,
+        "startDate": "2024-02-22T00:00:00Z",
+        "endDate": "2024-03-01T00:00:00Z",
+        "actualStartDate": "2024-02-22T00:00:00Z",
+        "actualEndDate": "2/28/2024 12:00:00 AMZ",
+        "tasks": [
+          {"name": "Final design presentation", "completed": true},
+          {"name": "Client approval and sign-off", "completed": true},
+          {"name": "Building permits application", "completed": true},
+          {"name": "HOA approval (if required)", "completed": true}
+        ]
+      },
+      {
+        "Id": 4,
+        "phase": "procurement",
+        "name": "Procurement & Ordering",
+        "description": "Ordering materials, furniture, and coordinating with suppliers",
+        "status": "in-progress",
+        "progress": 80,
+        "startDate": "2024-03-01T00:00:00Z",
+        "endDate": "2024-03-15T00:00:00Z",
+        "actualStartDate": "2024-03-01T00:00:00Z",
+        "actionRequired": "Waiting for client approval on upgraded cabinet hardware selection",
+        "tasks": [
+          {"name": "Kitchen cabinets and countertops ordered", "completed": true},
+          {"name": "Appliances confirmed and scheduled", "completed": true},
+          {"name": "Flooring materials secured", "completed": true},
+          {"name": "Lighting fixtures ordered", "completed": true},
+          {"name": "Hardware and accessories selection", "completed": false},
+          {"name": "Furniture delivery coordination", "completed": false}
+        ]
+      },
+      {
+        "Id": 5,
+        "phase": "delivery",
+        "name": "Delivery & Staging",
+        "description": "Coordinating deliveries and staging materials for installation",
+        "status": "pending",
+        "progress": 0,
+        "startDate": "2024-03-16T00:00:00Z",
+        "endDate": "2024-03-22T00:00:00Z",
+        "tasks": [
+          {"name": "Schedule delivery windows", "completed": false},
+          {"name": "Prepare staging area", "completed": false},
+          {"name": "Quality check all items", "completed": false},
+          {"name": "Coordinate with installation team", "completed": false}
+        ]
+      },
+      {
+        "Id": 6,
+        "phase": "installation",
+        "name": "Installation & Final Touches",
+        "description": "Professional installation and styling of all elements",
+        "status": "pending",
+        "progress": 0,
+        "startDate": "2024-03-23T00:00:00Z",
+        "endDate": "2024-04-15T00:00:00Z",
+        "tasks": [
+          {"name": "Demolition and prep work", "completed": false},
+          {"name": "Kitchen installation", "completed": false},
+          {"name": "Flooring installation", "completed": false},
+          {"name": "Electrical and lighting", "completed": false},
+          {"name": "Final styling and accessories", "completed": false},
+          {"name": "Client walkthrough and handover", "completed": false}
+        ]
+      }
+    ],
+    "upcomingMilestones": [
+      {
+        "Id": 1,
+        "name": "Hardware Selection Finalization",
+        "description": "Client to approve final cabinet hardware and fixture selections",
+        "date": "2024-03-12T00:00:00Z",
+        "phase": "Procurement",
+        "priority": "high"
+      },
+      {
+        "Id": 2,
+        "name": "Delivery Coordination Meeting",
+        "description": "Schedule and coordinate all major item deliveries",
+        "date": "2024-03-18T00:00:00Z",
+        "phase": "Delivery",
+        "priority": "medium"
+      },
+      {
+        "Id": 3,
+        "name": "Installation Kickoff",
+        "description": "Begin installation phase with demolition and prep work",
+        "date": "2024-03-25T00:00:00Z",
+        "phase": "Installation",
+        "priority": "high"
+      },
+      {
+        "Id": 4,
+        "name": "Mid-Installation Review",
+        "description": "Progress review and quality check midway through installation",
+        "date": "2024-04-05T00:00:00Z",
+        "phase": "Installation",
+        "priority": "medium"
+      }
+    ],
+    "totalBudget": 85000,
+    "budgetSpent": 48500,
+    "teamMembers": [
+      {"name": "Alexandra Chen", "role": "Lead Designer"},
+      {"name": "Marcus Rodriguez", "role": "Project Manager"},
+      {"name": "Jennifer Park", "role": "Installation Coordinator"}
+    ],
+    "createdAt": "2024-01-15T00:00:00Z",
+    "updatedAt": "2024-03-10T00:00:00Z"
+  }
+]
