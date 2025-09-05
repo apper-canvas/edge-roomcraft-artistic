@@ -1,0 +1,137 @@
+[
+  {
+    "Id": 1,
+    "name": "Living Room Design Proposal v2.pdf",
+    "description": "Complete living room renovation proposal including 3D renderings, material specifications, and budget breakdown",
+    "category": "quotes",
+    "type": "pdf",
+    "size": 2847592,
+    "uploadedAt": "2024-01-18T11:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Kitchen Floor Plan - Final.dwg",
+    "description": "Detailed architectural floor plan for kitchen renovation with measurements and fixture placements",
+    "category": "drawings",
+    "type": "document",
+    "size": 1245780,
+    "uploadedAt": "2024-01-15T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Design Services Agreement.pdf",
+    "description": "Signed contract for interior design services including scope of work, timeline, and terms",
+    "category": "contracts",
+    "type": "pdf",
+    "size": 892456,
+    "uploadedAt": "2024-01-10T09:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Furniture Invoice - West Elm.pdf",
+    "description": "Invoice for sectional sofa, coffee table, and accent chairs from West Elm",
+    "category": "invoices",
+    "type": "pdf",
+    "size": 456823,
+    "uploadedAt": "2024-01-22T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Before Photos - Living Room.zip",
+    "description": "Collection of before photos showing current living room condition from multiple angles",
+    "category": "photos",
+    "type": "image",
+    "size": 15678432,
+    "uploadedAt": "2024-01-12T10:20:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "Appliance Warranty - KitchenAid.pdf",
+    "description": "5-year warranty documentation for KitchenAid refrigerator and dishwasher",
+    "category": "warranties",
+    "type": "pdf",
+    "size": 234567,
+    "uploadedAt": "2024-01-20T13:00:00Z"
+  },
+  {
+    "Id": 7,
+    "name": "Color Palette & Materials.pdf",
+    "description": "Comprehensive color scheme and material selections for all rooms with vendor information",
+    "category": "quotes",
+    "type": "pdf",
+    "size": 3456789,
+    "uploadedAt": "2024-01-16T11:30:00Z"
+  },
+  {
+    "Id": 8,
+    "name": "Bathroom Elevation Drawings.pdf",
+    "description": "Detailed elevation drawings for master bathroom renovation with tile layouts",
+    "category": "drawings",
+    "type": "pdf",
+    "size": 1876543,
+    "uploadedAt": "2024-01-19T15:45:00Z"
+  },
+  {
+    "Id": 9,
+    "name": "Lighting Plan - Electrical.dwg",
+    "description": "Electrical plan showing all lighting fixtures, switches, and outlet placements",
+    "category": "drawings",
+    "type": "document",
+    "size": 987654,
+    "uploadedAt": "2024-01-17T14:20:00Z"
+  },
+  {
+    "Id": 10,
+    "name": "Final Invoice - Design Fees.pdf",
+    "description": "Final billing statement for design consultation and project management services",
+    "category": "invoices",
+    "type": "pdf",
+    "size": 345678,
+    "uploadedAt": "2024-01-25T12:00:00Z"
+  },
+  {
+    "Id": 11,
+    "name": "Progress Photos - Week 3.zip",
+    "description": "Construction progress photos showing framing and electrical rough-in completion",
+    "category": "photos",
+    "type": "image",
+    "size": 12345678,
+    "uploadedAt": "2024-01-24T09:30:00Z"
+  },
+  {
+    "Id": 12,
+    "name": "Paint Warranty - Sherwin Williams.pdf",
+    "description": "Lifetime warranty for premium paint products used throughout the home",
+    "category": "warranties",
+    "type": "pdf",
+    "size": 189234,
+    "uploadedAt": "2024-01-21T10:15:00Z"
+  },
+  {
+    "Id": 13,
+    "name": "Flooring Quote - Hardwood Plus.xlsx",
+    "description": "Detailed quote for oak hardwood flooring installation including labor and materials",
+    "category": "quotes",
+    "type": "spreadsheet",
+    "size": 567890,
+    "uploadedAt": "2024-01-14T16:00:00Z"
+  },
+  {
+    "Id": 14,
+    "name": "Change Order #2 - Kitchen Island.pdf",
+    "description": "Approved change order for upgraded kitchen island with additional storage",
+    "category": "contracts",
+    "type": "pdf",
+    "size": 234890,
+    "uploadedAt": "2024-01-23T11:45:00Z"
+  },
+  {
+    "Id": 15,
+    "name": "Final Reveal Photos.zip",
+    "description": "Professional after photos showcasing the completed interior design project",
+    "category": "photos",
+    "type": "image",
+    "size": 25678901,
+    "uploadedAt": "2024-01-26T14:00:00Z"
+  }
+]
