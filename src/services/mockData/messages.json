@@ -1,0 +1,115 @@
+[
+  {
+    "Id": 1,
+    "content": "Hi Sarah! I'm so excited to start working on my living room renovation. I've been dreaming about this for months!",
+    "attachments": [],
+    "senderId": "client",
+    "senderName": "You",
+    "timestamp": "2024-01-15T09:30:00Z"
+  },
+  {
+    "Id": 2,
+    "content": "Hello! I'm thrilled to work with you on this project. Let's create something amazing together! Could you share some inspiration images or tell me about your style preferences?",
+    "attachments": [],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-15T10:15:00Z"
+  },
+  {
+    "Id": 3,
+    "content": "I love modern minimalist design with warm touches. Here are some inspiration photos I've collected.",
+    "attachments": [
+      {
+        "name": "inspiration-1.jpg",
+        "type": "image/jpeg",
+        "url": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400"
+      },
+      {
+        "name": "inspiration-2.jpg", 
+        "type": "image/jpeg",
+        "url": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400"
+      }
+    ],
+    "senderId": "client",
+    "senderName": "You",
+    "timestamp": "2024-01-15T14:22:00Z"
+  },
+  {
+    "Id": 4,
+    "content": "Beautiful choices! I love the clean lines and warm wood tones. The neutral palette with those accent colors will work perfectly. What's your budget range for this project?",
+    "attachments": [],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-15T15:45:00Z"
+  },
+  {
+    "Id": 5,
+    "content": "I'm hoping to keep it between $15,000-20,000. Is that realistic for a complete living room makeover?",
+    "attachments": [],
+    "senderId": "client",
+    "senderName": "You",
+    "timestamp": "2024-01-15T16:10:00Z"
+  },
+  {
+    "Id": 6,
+    "content": "That's a great budget to work with! We can definitely create something stunning within that range. I'll put together some initial concepts and a detailed proposal for you.",
+    "attachments": [],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-15T16:30:00Z"
+  },
+  {
+    "Id": 7,
+    "content": "I've prepared the initial design concepts for your review. The proposal includes 3D renderings and a complete furniture list.",
+    "attachments": [
+      {
+        "name": "Living-Room-Proposal-v1.pdf",
+        "type": "application/pdf",
+        "url": "/documents/living-room-proposal-v1.pdf"
+      }
+    ],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-18T11:00:00Z"
+  },
+  {
+    "Id": 8,
+    "content": "Wow! The 3D renderings look incredible. I absolutely love the sectional sofa and that accent wall color. When can we start shopping for pieces?",
+    "attachments": [],
+    "senderId": "client",
+    "senderName": "You",
+    "timestamp": "2024-01-18T19:45:00Z"
+  },
+  {
+    "Id": 9,
+    "content": "So glad you love it! I can start sourcing the key pieces this week. The sectional has a 4-6 week lead time, so let's get that ordered first. I'll send you the vendor details.",
+    "attachments": [],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-19T08:20:00Z"
+  },
+  {
+    "Id": 10,
+    "content": "Perfect! I'm ready to place the order. Should I coordinate with you or handle it directly with the vendor?",
+    "attachments": [],
+    "senderId": "client",
+    "senderName": "You",
+    "timestamp": "2024-01-19T12:15:00Z"
+  },
+  {
+    "Id": 11,
+    "content": "I'll handle all vendor coordination to ensure we get the designer pricing and proper delivery timeline. Just need your approval on the final selections!",
+    "attachments": [],
+    "senderId": "designer",
+    "senderName": "Sarah Chen",
+    "timestamp": "2024-01-19T13:30:00Z"
+  },
+  {
+    "Id": 12,
+    "content": "You're the best! I trust your expertise completely. Let's move forward with everything in the proposal.",
+    "attachments": [],
+    "senderId": "client", 
+    "senderName": "You",
+    "timestamp": "2024-01-19T14:00:00Z"
+  }
+]
